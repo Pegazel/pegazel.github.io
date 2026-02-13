@@ -237,7 +237,7 @@ const projects = [
     {
         title: "Podcast",
         frontImage: "images/Podcast/zombie3.jpg",
-        gallery: ["images/Podcast/zombie4.jpg", "images/Podcast/zombie2.jpg", "images/Podcast/Zombie.jpg"],
+        gallery: ["images/Podcast/zombie4.jpg", "images/Podcast/zombie2.jpg", "images/Podcast/zombie.jpg"],
         year: "Nov 2023",
         description: "Analyse sonore et visuelle.",
         longDescription: `Au sein d'un projet de groupe, nous avons entrepris l'analyse approfondie de trois visuels d'horreur issus de bandes dessinées. Notre choix s'est porté sur un visuel tiré de "The Walking Dead". Nous avons décidé de le détourné pour sensibiliser sur une drogue bien réelle, surnommée la "drogue du zombie", une substance dont les effets font agir les consommateurs comme des zombies après en avoir pris. Bien que plus présente aux États-Unis, des rumeurs évoquent sa possible apparition en France, ce qui a renforcé notre volonté de prévention.
