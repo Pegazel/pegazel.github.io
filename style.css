@@ -752,7 +752,6 @@ li:before{
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding-bottom: 40px; /* Espace par rapport au bas de l'écran */
 }
 
 .contact-links a {
@@ -796,23 +795,23 @@ li:before{
 
 /* --- VERSION MOBILE (Horizontal en bas) --- */
 @media (max-width: 768px) {
+
     .side-contact {
+        position: fixed; /* Par défaut, elle flotte */
         left: 0;
-        bottom: 0; /* On la colle au bas */
+        bottom: 0;
         width: 100%;
-        /* background: rgba(20, 20, 20, 0.95); */
         backdrop-filter: blur(10px);
-        padding-bottom: 40px;
-        padding-top: 15px;
+        background: #1414149c;
+        padding: 15px 0;
         justify-content: center;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 2000;
         
-        /* État caché au départ sur mobile */
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(20px); 
-        transition: all 0.4s ease;
-        z-index: 1500; /* On la remet en haut pour qu'elle soit cliquable quand elle apparaît */
+        /* On retire le padding-bottom excessif pour qu'elle soit fine */
+        padding-bottom: 15px; 
+        
+        transition: opacity 0.4s ease, transform 0.4s ease;
     }
 
     .contact-line {
@@ -824,11 +823,17 @@ li:before{
         gap: 40px;
     }
     
-    /* On force la barre à être SOUS le footer quand on arrive tout en bas 
-       pour que les mentions légales soient cliquables */
+   /* Classe qui sera ajoutée par le JS quand on touche le footer */
+    .side-contact.stick-to-footer {
+        position: absolute;
+        bottom: 0; /* Elle se colle au bas de son parent (le body), juste avant le footer */
+        transform: translateY(-100%); /* Elle remonte juste au-dessus du footer */
+    }
+
     footer {
         position: relative;
-        z-index: 1600; /* Le footer passe devant la barre de contact */
+        z-index: 10;
+        margin-top: 0; /* On gère l'espace via le JS */
     }
 }
 
@@ -990,18 +995,61 @@ body.dark-mode .efrei span { color: #ea580c; }
 }
 
 
-footer{
-  /* position: relative; */
-  background-color: #141414;
-  box-shadow: 0px -3px 15px #141414;
-  height: 8vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.footer {
+    background: #141414;
+    padding: 50px 0 20px 0;
+    color: white;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.footer-links a, .footer-socials a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+.footer-links a:hover, .footer-socials a:hover {
+    color: #f4b01cff; /* Ton jaune/orange */
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
 }
 
-footer a{
-  color: #FFF;
+/* --- VERSION MOBILE (Écrans inférieurs à 768px) --- */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* On empile les éléments */
+        text-align: center; /* On centre le texte */
+        gap: 25px; /* On garde de l'espace entre les blocs */
+    }
+
+    .footer-links {
+        display: flex;
+        flex-direction: column; /* Les liens se mettent les uns sous les autres */
+        gap: 15px;
+    }
+
+    .footer-links a {
+        margin: 0; /* On retire les marges horizontales du PC */
+    }
+
+    .footer-socials {
+        order: -1; /* Optionnel : met les icônes réseaux sociaux en premier sur mobile */
+        margin-bottom: 10px;
+    }
 }
 
 p a {

@@ -237,7 +237,7 @@ const projects = [
     {
         title: "Podcast",
         frontImage: "images/Podcast/zombie3.jpg",
-        gallery: ["images/Podcast/zombie4.jpg", "images/Podcast/zombie2.jpg", "images/Podcast/zombie.jpg"],
+        gallery: ["images/Podcast/zombie4.jpg", "images/Podcast/zombie2.jpg", "images/Podcast/Zombie.jpg"],
         year: "Nov 2023",
         description: "Analyse sonore et visuelle.",
         longDescription: `Au sein d'un projet de groupe, nous avons entrepris l'analyse approfondie de trois visuels d'horreur issus de bandes dessinées. Notre choix s'est porté sur un visuel tiré de "The Walking Dead". Nous avons décidé de le détourné pour sensibiliser sur une drogue bien réelle, surnommée la "drogue du zombie", une substance dont les effets font agir les consommateurs comme des zombies après en avoir pris. Bien que plus présente aux États-Unis, des rumeurs évoquent sa possible apparition en France, ce qui a renforcé notre volonté de prévention.
@@ -378,8 +378,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 label: "Stratégie 360°" 
             },
             "Tous": { 
-                color: "#f4b01cff", 
-                shadow: "rgba(209, 144, 6, 0.4)", 
+                color: "#c51111ff", 
+                shadow: "rgba(226, 30, 30, 0.4)", 
                 label: "Tous" }
         };
 
@@ -718,24 +718,58 @@ document.querySelector('.about-visual').addEventListener('mouseleave', () => {
 
 
 
+// window.addEventListener('scroll', () => {
+//     const sideContact = document.querySelector('.side-contact');
+//     const aboutSection = document.querySelector('.section-parcours');
+    
+//     if (window.innerWidth <= 768 && aboutSection && sideContact) {
+//         // Calcul du bas de la section À propos
+//         const aboutBottom = aboutSection.offsetTop + aboutSection.offsetHeight;
+//         const scrollPosition = window.scrollY + window.innerHeight;
+
+//         // Si le bas de la page dépasse la fin de la section À propos
+//         if (scrollPosition > aboutBottom) {
+//             sideContact.style.opacity = "1";
+//             sideContact.style.visibility = "visible";
+//             sideContact.style.transform = "translateY(0)";
+//         } else {
+//             sideContact.style.opacity = "0";
+//             sideContact.style.visibility = "hidden";
+//             sideContact.style.transform = "translateY(20px)";
+//         }
+//     }
+// });
+
 window.addEventListener('scroll', () => {
     const sideContact = document.querySelector('.side-contact');
     const aboutSection = document.querySelector('.section-parcours');
+    const footer = document.querySelector('footer');
     
-    if (window.innerWidth <= 768 && aboutSection && sideContact) {
-        // Calcul du bas de la section À propos
+    if (window.innerWidth <= 768 && aboutSection && sideContact && footer) {
         const aboutBottom = aboutSection.offsetTop + aboutSection.offsetHeight;
         const scrollPosition = window.scrollY + window.innerHeight;
+        const footerTop = footer.offsetTop;
 
-        // Si le bas de la page dépasse la fin de la section À propos
+        // 1. Gérer l'apparition initiale (après la section parcours)
         if (scrollPosition > aboutBottom) {
             sideContact.style.opacity = "1";
             sideContact.style.visibility = "visible";
-            sideContact.style.transform = "translateY(0)";
         } else {
             sideContact.style.opacity = "0";
             sideContact.style.visibility = "hidden";
-            sideContact.style.transform = "translateY(20px)";
+        }
+
+        // 2. Gérer le blocage juste avant le footer
+        // Si le bas de la fenêtre atteint le haut du footer
+        if (scrollPosition >= footerTop) {
+            sideContact.classList.add('stick-to-footer');
+            // On positionne la barre exactement au-dessus du footer
+            sideContact.style.top = footerTop + "px";
+            sideContact.style.bottom = "auto";
+        } else {
+            sideContact.classList.remove('stick-to-footer');
+            sideContact.style.top = "auto";
+            sideContact.style.bottom = "0";
         }
     }
 });
