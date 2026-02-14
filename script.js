@@ -422,7 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // --- ENSUITE TU MODIFIES LE INNERHTML ---
             modalBody.innerHTML = `
             <div class="modal-header" style="text-align:center; margin-bottom:40px;">
-                <h1 style="font-size:3rem; text-transform:uppercase;">${project.title}</h1>
+                <h1 style="text-transform:uppercase;">${project.title}</h1>
                 <span class="category-badge" style="background: ${style.gradient}">${project.category} — ${project.year}</span>
             </div>
             
