@@ -64,7 +64,7 @@ const projects = [
         frontImage: "images/DGAC/logo.png",
         gallery: [
             "images/DGAC/A5 DSAC_Moindre buit_voilures fixes_Page_4.jpg", 
-            "images/DGAC/Affiche-paysage.png",
+            "images/DGAC/Affiche-paysage.jpg",
             "images/DGAC/logo-anime.gif",
             "images/DGAC/Symposium/Couverture-20ans.jpg",
             "images/DGAC/Symposium/banniere_affiche.jpg"
@@ -83,8 +83,8 @@ const projects = [
         lien: "https://drive.google.com/drive/folders/1tVFcl52VM6m5uUIhOcueLJBPh-9jrZKw?usp=sharing" 
     },{
         title: "TRIBU",
-        frontImage: "images/Tribu/restaurant-tribu.png",
-        gallery: ["images/Tribu/Menu-Tribu.png", "images/Tribu/Set-table.jpeg", "images/Tribu/Evenements-Tribu.png"],
+        frontImage: "images/Tribu/restaurant-tribu.jpg",
+        gallery: ["images/Tribu/Menu-Tribu.jpg", "images/Tribu/Set-table.jpg", "images/Tribu/Evenements-Tribu.jpg"],
         year: "Octobre 2025",
         description: "Refonte de la stratégie de communication d'un restaurant de village.",
         longDescription: `TRIBU est un restaurant de village à Roquemaure conçu comme un véritable point de ralliement pour les familles et les amis. 
@@ -102,12 +102,12 @@ const projects = [
         year: "2024 - 2025",
         frontImage: "images/CEIDF/logo.jpg",
         gallery: [
-            "images/CEIDF/intranet-refonte.png", 
+            "images/CEIDF/intranet-refonte.jpg", 
             "images/CEIDF/PLV-Page1.jpg",
             "images/CEIDF/PLV-Page2.jpg",
-            "images/CEIDF/mail1.png", 
-            "images/CEIDF/mail2.png",
-            "images/CEIDF/campagne-digitale.png"
+            "images/CEIDF/mail1.jpg", 
+            "images/CEIDF/mail2.jpg",
+            "images/CEIDF/campagne-digitale.jpg"
         ],
         description: "Alternance d'un an en tant que Chargée de communication commerciale et pilotage de la stratégie multimédia.",
         longDescription: `Durant mon alternance d'un an à la Caisse d'Épargne Île-de-France, j'ai évolué au sein du pôle Communication Commerciale. Mon mémoire porte sur l'optimisation de la stratégie de communication à travers la création de supports, la collaboration interne et le levier du numérique.
@@ -122,8 +122,8 @@ const projects = [
         lien: "https://drive.google.com/drive/folders/1QCY9bM7UNxL5Vfytweqk01RkuLE0cgpJ?usp=sharing"
     },{
         title: "LEGO",
-        frontImage: "images/Lego/logo.png",
-        gallery: ["images/Lego/sacs.png", "images/Lego/goodies.png", "images/Lego/web.png"],
+        frontImage: "images/Lego/logo.jpg",
+        gallery: ["images/Lego/sacs.jpg", "images/Lego/goodies.jpg", "images/Lego/web.jpg"],
         year: "Mars 2025",
         description: "Éco-branding et stratégie de développement durable pour une marque iconique.",
         longDescription: `Dans le cadre de ce projet de groupe, nous avons repensé la stratégie de marque de LEGO pour l'aligner sur des enjeux de développement durable. L'objectif était de réduire l'empreinte écologique de la marque sur l'ensemble de ses points de contact, sans perdre son identité iconique.
@@ -139,8 +139,8 @@ const projects = [
         details: ["Éco-conception", "Branding", "UI/UX", "Audit", "Développement durable"]
     },{
         title: "APF France handicap",
-        frontImage: "images/APF/0.png",
-        gallery: ["images/APF/1.png", "images/APF/2.jpg", "images/APF/3.png", "images/APF/4.png"],
+        frontImage: "images/APF/0.jpg",
+        gallery: ["images/APF/1.jpg", "images/APF/2.jpg", "images/APF/3.png", "images/APF/4.png"],
         year: "Juin 2025",
         description: "Musée virtuel des oeuvres d'artistes en situation de handicap.",
         longDescription: `En collaboration avec l’APF France handicap, nous avons travaillé directement avec des personnes en situation de handicap afin de créer un musée virtuel qui met en valeur leurs œuvres. Ce projet visait à offrir une plateforme inclusive où ces artistes pouvaient exposer leurs créations et partager leurs histoires.
@@ -159,7 +159,7 @@ const projects = [
     },{
         title: "EON",
         frontImage: "images/Eon/eon.jpg",
-        gallery: ["images/Eon/eon1.png", "images/Eon/eon2.png", "images/Eon/eon3.png", "images/Eon/eon4.png"],
+        gallery: ["images/Eon/eon1.jpg", "images/Eon/eon2.jpg", "images/Eon/eon3.jpg", "images/Eon/eon4.jpg"],
         year: "Janvier 2025",
         description: "Voiture autonome électrique.",
         longDescription: `Dans le cadre de notre cours de Direction Artistique, nous avons travaillé en équipe de trois sur un projet de communication autour d’un sujet tiré au sort : voiture électrique autonome. Passionné par l’automobile, ce projet m’a particulièrement enthousiasmé, car il m’a permis d’allier design, innovation et stratégie de marque.
@@ -186,8 +186,8 @@ const projects = [
     },
     {
         title: "Art&Misia",
-        frontImage: "images/Art&Misia/artemisia.png",
-        gallery: ["images/Art&Misia/artemisia2.jpg", "images/Art&Misia/artemisia3.png", "images/Art&Misia/artemisia4.png"],
+        frontImage: "images/Art&Misia/artemisia.jpg",
+        gallery: ["images/Art&Misia/artemisia2.jpg", "images/Art&Misia/artemisia3.jpg", "images/Art&Misia/artemisia4.jpg"],
         year: "Mars 2024",
         description: "Musée virtuel dédié à Artemisia Gentileschi.",
         longDescription: `Dans le cadre de ce projet de fin d’année, notre équipe a conçu un musée virtuel dédié à Artemisia Gentileschi, une artiste emblématique de la période baroque et pionnière du féminisme à travers l'art. Ce musée virtuel comprend un site de l'exposition et un espace immersif et interactif en ligne, créés par notre équipe de développeurs. En tant que créative, j'ai collaboré avec mon binôme pour gérer toute la communication autour de l'exposition.
@@ -205,8 +205,8 @@ const projects = [
     },
     {
         title: "CV Vidéo",
-        frontImage: "images/CVVideo/cvvideo.png",
-        gallery: ["images/CVVideo/cvvideo2.png", "images/CVVideo/cvvideo3.png"],
+        frontImage: "images/CVVideo/cvvideo.jpg",
+        gallery: ["images/CVVideo/cvvideo2.jpg", "images/CVVideo/cvvideo3.jpg"],
         year: "Jan 2024",
         description: "Montage et tournage d'un CV dynamique.",
         longDescription: `En tant qu'étudiante passionnée, j'ai conçu mon CV vidéo pour illustrer mes compétences naissantes dans l'utilisation de logiciels de montage vidéo tels qu'Adobe Premiere Pro, After Effects et Adobe Audition. Cette réalisation démontre ma volonté d'apprendre et de maîtriser ces outils techniques essentiels dans le domaine du multimédia et de l'audiovisuel. De plus, la création de mon CV vidéo en anglais vise à mettre en avant mes compétences linguistiques, soulignant ainsi ma capacité à évoluer dans un environnement international.
